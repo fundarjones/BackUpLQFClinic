@@ -3669,7 +3669,7 @@ app.post('/diagnose-patient', checkAuthenticated, async (req, res) => {
         } else {
           appointment_status = "Done"
         }
-        const old = await Appointment.findOne({id:id})
+        const old = await Appointment.findOne({id:id}) 
         const exp_symptoms = old.exp_symptoms
         const symptoms_detected = old.symptoms_detected
         const birthday = old.birthday
